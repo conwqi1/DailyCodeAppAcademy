@@ -1,25 +1,20 @@
 def merge_sort(arr)
-  if arr.length == 1
-    #base case
-  else
-    #split it up?
-  end
+  return arr if arr.length < 2
+  middle = arr.length / 2
+  left = arr.take(middle)
+  right = arr.drop(middle)
+  sorted_left, sorted_right = merge_sort(left), merge_sort(right)
+  merge(sorted_left, sorted_right)
 end
 
-def merge(arr1, arr2)
-  sorted_array = []
-  arr1.each do |el1|
-    arr2.each do |el2|
-      if el1 < el2
-        sorted_array << el1
-      else 
-        sorted_array << el2
-      end
-    end
+def merge(left, right)
+  merged = []
+  until left.empty? || right.empty?
+    merged << ((left.first < right.first) ? left.shift : right.shift)
   end
+  merged + left + right
 end
 
-a = [1, 4]
-b = [2, 8]
 
-p merge(a,b)
+
+
