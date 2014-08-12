@@ -15,10 +15,4 @@ end
 a = [1,2,3,4,5]
 puts binary_search(a, 4)
 
-  #else
 
-  #find middle value of array, if target is greater than the value at 
-  #that index, perform binary search on numbers greater than that in the array
-  
-  #else perform binary search on values less than that in the array
-  
