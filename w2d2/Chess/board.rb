@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 class Board
   
   def initialize
@@ -10,6 +12,7 @@ class Board
     @board[row][col]
   end
   
+
   def set_board
     @board[0][0] = Rook.new([0,0], @board, :black)
     @board[0][1] = Knight.new([0,1], @board, :black)
@@ -28,7 +31,6 @@ class Board
     @board[7][5] = Bishop.new([7,5], @board, :white)
     @board[7][6] = Knight.new([7,6], @board, :white)
     @board[7][7] = Rook.new([7,7], @board, :white)
-    
   end
   
   def render
@@ -36,7 +38,7 @@ class Board
       row.map do |piece|
         case
         when piece.is_a?(Rook) && piece.color == :white
-          "wR"
+          ♔
         when piece.is_a?(Rook) && piece.color == :black
           "bR"
         when piece.is_a?(Bishop) && piece.color == :white
@@ -48,7 +50,7 @@ class Board
         when piece.is_a?(King)
           "K"
         when piece.is_a?(Queen)
-          "Q"
+         ♕
         when piece.is_a?(NilClass)
           "_"
         end
