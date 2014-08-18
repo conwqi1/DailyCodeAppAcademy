@@ -1,24 +1,5 @@
 # Blackjack
 
-## Rules
-
-* You have **1 hour** for the assessment. Do not worry if you do not
-  complete all the assessment; finish as much as you can.
-* Descriptions of each method to implement are written into the `lib/`
-  files. For each `lib/` file, there is a corresponding `spec/` file.
-* Run the specs as you solve the assessment. Solve the assessment in
-  this order:
-
-```
-bundle exec rspec spec/deck_spec.rb
-bundle exec rspec spec/hand_spec.rb
-bundle exec rspec spec/player_spec.rb
-bundle exec rspec spec/dealer_spec.rb
-```
-
-* Wait until you finish to run `rspec spec`, which will run all the
-  tests. Do this as a final check that you have them all passing.
-
 ## Game Rules
 
 * Players play against the dealer; multiple players can win each
