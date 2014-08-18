@@ -23,10 +23,6 @@ class Deck
   def count
     @cards.count
   end
-  
-  def shuffle
-    @cards.shuffle
-  end
 
   # Takes `n` cards from the top of the deck.
   def take(n)
